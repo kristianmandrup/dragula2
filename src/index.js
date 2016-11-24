@@ -1,8 +1,5 @@
-export default class Library {
-  constructor() {
-    this._name = 'Library';
-  }
-  get name() {
-    return this._name;
-  }
+const Dragula = require('dragula')
+
+export default function (initialContainers, options) {
+  return new Dragula(initialContainers, options).configured()
 }

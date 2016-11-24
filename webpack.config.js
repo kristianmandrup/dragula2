@@ -1,24 +1,25 @@
-var webpack = require('webpack');
-var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-var path = require('path');
-var env = require('yargs').argv.mode;
+const webpack = require('webpack')
+const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+const path = require('path')
+const env = require('yargs').argv.mode
 
-var libraryName = 'Library';
+const libraryName = 'dragula'
 
-var plugins = [], outputFile;
+const plugins = []
+let outputFile
 
 if (env === 'build') {
-  plugins.push(new UglifyJsPlugin({ minimize: true }));
-  outputFile = libraryName + '.min.js';
+  plugins.push(new UglifyJsPlugin({ minimize: true }))
+  outputFile = libraryName + '.min.js'
 } else {
-  outputFile = libraryName + '.js';
+  outputFile = libraryName + '.js'
 }
 
 var config = {
-  entry: __dirname + '/src/index.js',
+  entry: path.join(__dirname, '/src/index.js'),
   devtool: 'source-map',
   output: {
-    path: __dirname + '/lib',
+    path: path.join(__dirname, '/lib'),
     filename: outputFile,
     library: libraryName,
     libraryTarget: 'umd',
@@ -33,7 +34,7 @@ var config = {
       },
       {
         test: /(\.jsx|\.js)$/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         exclude: /node_modules/
       }
     ]
@@ -43,6 +44,6 @@ var config = {
     extensions: ['', '.js']
   },
   plugins: plugins
-};
+}
 
-module.exports = config;
+module.exports = config
