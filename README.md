@@ -352,6 +352,7 @@ Requires Node 6 or higher
 - `npm run lint:fix` run lint and auto-fix errors
 - `npm run build` to build `.js` library files in `lib`
 - `npm run build:all` to build `.js` libs and `.css` stylesheets
+- `npm run build:styles` to build `.css` stylesheets
 - `npm run dev` for Development mode (webpack recompile on change)
 - `npm test` to run all tests
 - `npm test:watch` run tests in watch mode
