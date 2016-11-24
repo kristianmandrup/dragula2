@@ -1,33 +1,31 @@
-'use strict';
-
-var cache = {};
-var start = '(?:^|\\s)';
-var end = '(?:\\s|$)';
+let cache = {}
+let start = '(?:^|\\s)'
+let end = '(?:\\s|$)'
 
 function lookupClass (className) {
-  var cached = cache[className];
+  var cached = cache[className]
   if (cached) {
-    cached.lastIndex = 0;
+    cached.lastIndex = 0
   } else {
-    cache[className] = cached = new RegExp(start + className + end, 'g');
+    cache[className] = cached = new RegExp(start + className + end, 'g')
   }
-  return cached;
+  return cached
 }
 
 function addClass (el, className) {
-  var current = el.className;
+  var current = el.className
   if (!current.length) {
-    el.className = className;
+    el.className = className
   } else if (!lookupClass(className).test(current)) {
-    el.className += ' ' + className;
+    el.className += ' ' + className
   }
 }
 
 function rmClass (el, className) {
-  el.className = el.className.replace(lookupClass(className), ' ').trim();
+  el.className = el.className.replace(lookupClass(className), ' ').trim()
 }
 
 module.exports = {
   add: addClass,
   rm: rmClass
-};
+}

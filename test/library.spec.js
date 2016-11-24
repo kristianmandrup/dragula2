@@ -1,19 +1,23 @@
-import chai from 'chai';
-import Library from '../lib/library.js';
+import test from 'ava'
 
-chai.expect();
+test('x', t => {
+  t.deepEqual([1, 2], [1, 2])
+})
 
-const expect = chai.expect;
+// import chai from 'chai'
+// import dragula from '../lib/dragula.js'
 
-let lib;
+// chai.expect()
 
-describe('Given an instance of my library', function () {
-  before(function () {
-    lib = new Library();
-  });
-  describe('when I need the name', function () {
-    it('should return the name', () => {
-      expect(lib.name).to.be.equal('Library');
-    });
-  });
-});
+// const expect = chai.expect
+
+// describe('Given an instance of my library', function () {
+//   before(function () {
+//     lib = new Library()
+//   })
+//   describe('when I need the name', function () {
+//     it('should return the name', () => {
+//       expect(lib.name).to.be.equal('Library')
+//     })
+//   })
+// })

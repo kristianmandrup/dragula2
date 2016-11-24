@@ -166,7 +166,6 @@ export default class Dragula {
     }
   }
 
-
   updateCurrentMovingDirection (x, y) {
     if (x > this.previousMousePosition.x) {
       this.currentMovingDirection = 'right'

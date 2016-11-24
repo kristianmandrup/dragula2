@@ -15,6 +15,12 @@ if (env === 'build') {
   outputFile = libraryName + '.js'
 }
 
+// {
+//   test: /(\.jsx|\.js)$/,
+//   loader: 'eslint-loader',
+//   exclude: /node_modules/
+// }
+
 var config = {
   entry: path.join(__dirname, '/src/index.js'),
   devtool: 'source-map',
@@ -31,11 +37,6 @@ var config = {
         test: /(\.jsx|\.js)$/,
         loader: 'babel',
         exclude: /(node_modules|bower_components)/
-      },
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/
       }
     ]
   },

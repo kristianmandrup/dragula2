@@ -11,6 +11,7 @@ Framework support includes vanilla JavaScript, Angular, and React.
 - Official [Angular bridge][8] for `dragula` [_(demo)_][10]
 - Official [Angular 2 bridge][22] for `dragula` [_(demo)_][23]
 - Official [React bridge][9] for `dragula` [_(demo)_][11]
+- Official [Vue bridge][24] for `dragula` [_(demo)_][25]
 
 # Demo
 
@@ -343,6 +344,34 @@ Dragula uses only four CSS classes. Their purpose is quickly explained below, bu
 
 See [contributing.markdown][14] for details.
 
+## Development
+
+Requires Node 6 or higher
+
+- `npm run lint` run lint using [standardjs](http://standardjs.com/)
+- `npm run lint:fix` run lint and auto-fix errors
+- `npm run build` to build `.js` library files in `lib`
+- `npm run build:all` to build `.js` libs and `.css` stylesheets
+- `npm run dev` for Development mode (webpack recompile on change)
+- `npm test` to run all tests
+- `npm test:watch` run tests in watch mode
+- `npm start` start
+
+#### Deprecated tools
+
+Now using `ava` for testing and `standard` for linting.
+
+```
+  "scripts": {
+    "test:mocha": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",
+  },
+  "devDependencies": {
+    "eslint": "^3.10.0",
+    "eslint-loader": "^1.6.1",
+    "mocha": "^3.1.2",
+  }
+```
+
 # Support
 
 There's now a dedicated support channel in Slack. Visit [this page][21] to get an invite. Support requests won't be handled through the repository anymore.
@@ -374,3 +403,5 @@ MIT
 [21]: https://dragula-slackin.herokuapp.com/
 [22]: https://github.com/valor-software/ng2-dragula
 [23]: http://valor-software.com/ng2-dragula/index.html
+[24]: https://github.com/kristianmandrup/vue2-dragula
+[25]: https://github.com/kristianmandrup/vue2-dragula-demo/
