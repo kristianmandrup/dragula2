@@ -15,6 +15,8 @@ Framework support includes vanilla JavaScript, Angular, and React.
 
 # Demo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/dragula2.svg)](https://greenkeeper.io/)
+
 [![demo.png][1]][2]
 
 Try out the [demo][2]!
